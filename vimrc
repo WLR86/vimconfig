@@ -1,7 +1,7 @@
 set nocompatible
 set t_Co=256
 filetype off
-
+let php_folding=0
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -11,6 +11,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify'
+Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'phpfolding.vim'
+Plugin 'Auto-Pairs'
+Plugin 'surround.vim'
 
 call vundle#end()
 
@@ -38,6 +43,10 @@ let g:airline_theme='dark'
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
+
+" Syntastic
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 
 " NERDTree : Open in Tab by default
 "let NERDTreeMapOpenInTab='\r'
