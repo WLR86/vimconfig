@@ -16,6 +16,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'phpfolding.vim'
 Plugin 'Auto-Pairs'
 Plugin 'surround.vim'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 
