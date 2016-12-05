@@ -26,7 +26,7 @@ syntax on
 set number
 set mouse=a
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
 
 
 
