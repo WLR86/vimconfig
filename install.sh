@@ -8,5 +8,7 @@ ln -s vimconfig/vimrc .vimrc
 
 vim +PluginInstall +qall
 
+sed -i '/^"colorscheme  /s/^"//' .vim/vimrc
+
 echo Done.
 
