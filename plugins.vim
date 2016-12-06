@@ -9,9 +9,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'shawncplus/phpcomplete.vim'
-"Plugin 'phpfolding.vim'
+Plugin 'phpfolding.vim'
 Plugin 'Auto-Pairs'
 Plugin 'surround.vim'
-"Plugin 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
