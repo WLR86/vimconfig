@@ -12,7 +12,7 @@ set number
 set mouse=a
 set background=dark
 set t_ut=
-colorscheme gruvbox
+silent! colorscheme gruvbox
 
 
 
