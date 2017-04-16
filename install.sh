@@ -1,10 +1,11 @@
 #!/bin/sh
 
+# Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ./bundle/Vundle.vim
 
-# backup any existing config
-mkdir -p ~/.vimbackup
-mv -f ~/.vim* ~/.vimbackup/
+# Backup any existing config
+mkdir -p ~/.VimBackup
+mv -f ~/.vim* ~/.VimBackup/
 
 ln -s ~/vimconfig ~/.vim
 ln -s ~/vimconfig/vimrc ~/.vimrc
