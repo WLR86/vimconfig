@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 set t_Co=256
 filetype off
 let php_folding=0
