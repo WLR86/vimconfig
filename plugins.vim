@@ -16,4 +16,6 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Auto-Pairs'
 Plugin 'surround.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'vim-scripts/restore_view.vim'
+Plugin 'scrooloose/syntastic'
 call vundle#end()

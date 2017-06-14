@@ -61,6 +61,7 @@ nmap <silent> <F5> :bp<CR>
 nmap <silent> <F6> :bn<CR>
 nmap <silent> <F7> :b#<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
+imap £ ->
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
@@ -132,3 +133,6 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+"Prevent vim from moving cursor to the left when leaving Insert mode
+au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
