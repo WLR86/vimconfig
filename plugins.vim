@@ -18,4 +18,5 @@ Plugin 'surround.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'The-NERD-Commenter'
 call vundle#end()
