@@ -19,4 +19,5 @@ Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'The-NERD-Commenter'
 Plugin 'phpfolding.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
