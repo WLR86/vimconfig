@@ -4,6 +4,8 @@ set encoding=utf-8
 set t_Co=256
 let php_folding=0
 
+let mapleader=","
+
 source ~/.vim/plugins.vim
 
 filetype plugin indent on
@@ -15,7 +17,8 @@ set background=dark
 set t_ut=
 silent! colorscheme gruvbox
 
-
+" NERDCommenter
+let g:NERDSpaceDelims = 1
 
 " Vim-Airline Cfg
 let g:airline_powerline_fonts = 1
@@ -55,8 +58,7 @@ set noautochdir
 set ttimeoutlen=50
 autocmd Filetype php setlocal ts=4 sw=4 noexpandtab noet
 autocmd BufEnter * :syntax sync fromstart
-map <RightMouse> za
-map <Leader> ,
+nmap <RightMouse> za
 nmap <silent> <F5> :bp<CR>
 nmap <silent> <F6> :bn<CR>
 nmap <silent> <F7> :b#<CR>
@@ -94,9 +96,9 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  "return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
   " For no inserting <CR> key.
-  "return pumvisible() ? "\<C-y>" : "\<CR>"
+  return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -155,7 +157,7 @@ if has('conceal')
 endif
 
 "Prevent vim from moving cursor to the left when leaving Insert mode
-au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
+"au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
 let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
