@@ -165,3 +165,5 @@ let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
 set showcmd
 command! MakeTags !ctags -R --exclude='*.js' .
+" Allow moving/resizing splits using mouse inside a Tmux session
+set ttymouse=xterm2
