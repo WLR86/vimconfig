@@ -7,7 +7,6 @@ let php_folding=0
 let mapleader=","
 
 source ~/.vim/plugins.vim
-
 filetype plugin indent on
 
 syntax on
@@ -38,6 +37,10 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 " Syntastic
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 
 " NERDTree : Open in Tab by default
 "let NERDTreeMapOpenInTab='\r'
@@ -51,19 +54,22 @@ set nolist
 set nocursorline
 set noexpandtab
 set noet
-set ts=4	
+set ts=4
 set shiftwidth=4
 set noautochdir
 "let NERDTreeChDirMode=0
 set ttimeoutlen=50
 autocmd Filetype php setlocal ts=4 sw=4 noexpandtab noet
 autocmd BufEnter * :syntax sync fromstart
+" My custom keys
 nmap <RightMouse> za
 nmap <silent> <F5> :bp<CR>
 nmap <silent> <F6> :bn<CR>
 nmap <silent> <F7> :b#<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
+cmap w!! w !sudo tee % >/dev/null
+
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
@@ -164,6 +170,18 @@ let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
 set showcmd
+
+" My custom commands
 command! MakeTags !ctags -R --exclude='*.js' .
+command! TrimWhiteSpaces %s/\s\+$//g
+
 " Allow moving/resizing splits using mouse inside a Tmux session
 set ttymouse=xterm2
+
+" Trim White Spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
