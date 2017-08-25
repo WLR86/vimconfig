@@ -169,6 +169,7 @@ let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
+
 set showcmd
 
 " My custom commands
@@ -178,10 +179,13 @@ command! TrimWhiteSpaces %s/\s\+$//g
 " Allow moving/resizing splits using mouse inside a Tmux session
 set ttymouse=xterm2
 
-" Trim White Spaces
+" Highlight White Spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" tmuxline
+let g:airline#extensions#tmuxline#enabled=1
