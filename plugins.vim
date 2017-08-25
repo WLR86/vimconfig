@@ -21,4 +21,5 @@ Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'phpfolding.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'edkolev/tmuxline.vim'
 call vundle#end()
