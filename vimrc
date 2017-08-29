@@ -12,7 +12,8 @@ filetype plugin indent on
 syntax on
 set number
 set mouse=a
-set background=light
+set background=dark
+let g:darkmode=1
 set t_ut=
 " gruvbox
 let g:gruvbox_inverse=0
@@ -31,7 +32,7 @@ let g:airline_left_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline_theme='cool'
+let g:airline_theme='dark'
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
@@ -45,9 +46,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
-" NERDTree : Open in Tab by default
-"let NERDTreeMapOpenInTab='\r'
-
 " Make Airline appear
 set laststatus=2
 
@@ -60,7 +58,6 @@ set ts=4
 set showcmd
 set shiftwidth=4
 set noautochdir
-"let NERDTreeChDirMode=0
 set ttimeoutlen=50
 autocmd Filetype php setlocal ts=4 sw=4 noexpandtab noet
 autocmd BufEnter * :syntax sync fromstart
@@ -192,20 +189,18 @@ autocmd BufWinLeave * call clearmatches()
 " tmuxline
 let g:airline#extensions#tmuxline#enabled=1
 
-" Toggle between predefined dark and light mode 
+" Toggle between predefined dark and light mode
 let g:darkmode=0
 function Dark()
 	set background=dark
 	AirlineTheme dark
-	let g:darkmode=1
 endfunction
 function Light()
 	set background=light
 	AirlineTheme cool
-	let g:darkmode=0
 endfunction
 function ToggleScheme()
-	if g:darkmode==1
+	if &background=='dark'
 		call Light()
 	else
 		call Dark()
