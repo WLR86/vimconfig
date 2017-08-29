@@ -32,7 +32,7 @@ let g:airline_theme='dark'
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
-let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
 " Syntastic
 let g:syntastic_error_symbol = "✗"
@@ -48,13 +48,13 @@ let g:syntastic_check_on_wq = 1
 " Make Airline appear
 set laststatus=2
 
-" No spell
 set nospell
 set nolist
 set nocursorline
 set noexpandtab
 set noet
 set ts=4
+set showcmd
 set shiftwidth=4
 set noautochdir
 "let NERDTreeChDirMode=0
@@ -170,7 +170,6 @@ let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
 
-set showcmd
 
 " My custom commands
 command! MakeTags !ctags -R --exclude='*.js' .

@@ -22,5 +22,4 @@ Plugin 'vim-scripts/restore_view.vim'
 Plugin 'phpfolding.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'edkolev/tmuxline.vim'
-"Plugin 'itchyny/lightline.vim'
 call vundle#end()
