@@ -12,8 +12,11 @@ filetype plugin indent on
 syntax on
 set number
 set mouse=a
-set background=dark
+set background=light
 set t_ut=
+" gruvbox
+let g:gruvbox_inverse=0
+let g:gruvbox_improved_strings=0
 silent! colorscheme gruvbox
 
 " NERDCommenter
@@ -28,7 +31,7 @@ let g:airline_left_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline_theme='dark'
+let g:airline_theme='cool'
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
@@ -188,3 +191,4 @@ autocmd BufWinLeave * call clearmatches()
 
 " tmuxline
 let g:airline#extensions#tmuxline#enabled=1
+
