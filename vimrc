@@ -1,3 +1,8 @@
+" Set default dark/light
+set background=light
+let g:airline_theme='cool'
+silent! set termguicolors
+
 set nocompatible
 filetype off
 set encoding=utf-8
@@ -12,8 +17,6 @@ filetype plugin indent on
 syntax on
 set number
 set mouse=a
-set background=dark
-let g:darkmode=1
 set t_ut=
 " gruvbox
 let g:gruvbox_inverse=0
@@ -32,7 +35,6 @@ let g:airline_left_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline_theme='dark'
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
@@ -190,7 +192,6 @@ autocmd BufWinLeave * call clearmatches()
 let g:airline#extensions#tmuxline#enabled=1
 
 " Toggle between predefined dark and light mode
-let g:darkmode=0
 function Dark()
 	set background=dark
 	AirlineTheme dark
@@ -206,6 +207,7 @@ function ToggleScheme()
 		call Dark()
 	endif
 endfunction
+
 nmap <silent> <F2> :call ToggleScheme()<CR>
 nmap <silent> <F3> :call Dark()<CR>
 nmap <silent> <F4> :call Light()<CR>
