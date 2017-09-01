@@ -17,6 +17,7 @@ filetype plugin indent on
 syntax on
 set number
 set mouse=a
+" clearing uses the current background color
 set t_ut=
 " gruvbox
 let g:gruvbox_inverse=0
