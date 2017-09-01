@@ -10,9 +10,11 @@ it might suit your needs too, feel free to clone it :).
 This vimrc works also fine on my Mac, using MacVim and vim on this platform.
 
 Update:
-NeoComplete and NeoSnippet are now included
+NeoComplete and NeoSnippet are now included. 
 Note that NeoComplete requires vim to be compiled with LUA support - installing vim-nox package takes care of this :
-$ sudo apt install vim-nox
+```
+sudo apt install vim-nox
+```
 
 ## How to install :
 1) Clone this repo from your home directory
@@ -23,8 +25,7 @@ $ sudo apt install vim-nox
 ## Custom commands available:
 
 ### MakeTags
-Invoke ctags in the current directory recursevely to create tags
-Tags can then be used with common keys to navigate back and forth
+Invoke ctags in the current directory recursevely to create tags for your code : You can then navigate your code jumping from where a method is used to where this method is defined, and back.
 ```
 command! MakeTags !ctags -R --exclude='*.js' .
 ```
