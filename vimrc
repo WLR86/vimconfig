@@ -211,4 +211,5 @@ function ToggleScheme()
 		call Dark()
 	endif
 endfunction
+highlight Cursor gui=reverse term=reverse
 
