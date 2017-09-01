@@ -22,4 +22,5 @@ Plugin 'vim-scripts/restore_view.vim'
 Plugin 'phpfolding.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'Tagbar'
 call vundle#end()
