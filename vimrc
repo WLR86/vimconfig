@@ -213,3 +213,5 @@ function ToggleScheme()
 endfunction
 highlight Cursor gui=reverse term=reverse
 
+" Set font for MacVim
+set guifont=InputMono\ ExLight:h18
