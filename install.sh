@@ -10,7 +10,7 @@ mv -f ~/.vim* ~/.VimBackup/
 ln -s ~/vimconfig ~/.vim
 ln -s ~/vimconfig/vimrc ~/.vimrc
 
-vim -c ~/.vim/plugins.vim +PluginInstall +qall
+vim -s ~/.vim/plugins.vim +PluginInstall +qall
 
 echo Done.
 
