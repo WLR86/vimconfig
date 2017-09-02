@@ -1,12 +1,16 @@
 " Set default dark/light
 set background=light
 let g:airline_theme='cool'
-silent! set termguicolors
-
+" Let's use same colors as GUI, if possible
+"silent! set termguicolors
+" In case it doesn't work, let's try this
+"let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+"let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 set nocompatible
 filetype off
 set encoding=utf-8
-set t_Co=256
+" Not sure this is needed anymore
+"set t_Co=256
 let php_folding=0
 
 let mapleader=","
