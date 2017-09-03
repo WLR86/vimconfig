@@ -2,7 +2,7 @@
 set background=light
 let g:airline_theme='cool'
 " Let's use same colors as GUI, if possible
-"silent! set termguicolors
+silent! set termguicolors
 " In case it doesn't work, let's try this
 "let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 "let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
@@ -179,7 +179,11 @@ let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
-
+let g:tagbar_left=1
+let g:tagbar_width=30
+let g:tagbar_sort=0
+let g:tagbar_compact=1
+let g:tagbar_indent=1
 
 " My custom commands
 command! MakeTags !ctags -R --exclude='*.js' .
@@ -215,6 +219,8 @@ function ToggleScheme()
 		call Dark()
 	endif
 endfunction
+
+
 highlight Cursor gui=reverse term=reverse
 
 " Set font for MacVim
