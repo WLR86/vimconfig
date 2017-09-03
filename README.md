@@ -22,6 +22,27 @@ sudo apt install vim-nox
 3) run install.sh
 4) Done =)
 
+## Custom keys
+F2: Toggle dark/light mode
+F3: Set dark mode
+F4: Set light mode
+F5: Previous Buffer
+F6: Next Buffer
+F7: Switch last two Buffers
+F8: Toggle Tagbar
+```
+nmap <RightMouse> za
+nmap <silent> <F2> :call ToggleScheme()<CR>
+nmap <silent> <F3> :call Dark()<CR>
+nmap <silent> <F4> :call Light()<CR>
+nmap <silent> <F5> :bp<CR>
+nmap <silent> <F6> :bn<CR>
+nmap <silent> <F7> :b#<CR>
+nmap <silent> <F12> :AirlineRefresh<CR>
+imap £ ->
+cmap w!! w !sudo tee % >/dev/null
+```
+
 ## Custom commands available:
 
 ### MakeTags

@@ -1,6 +1,6 @@
-" Set default dark/light
-set background=light
-let g:airline_theme='cool'
+" Set default dark/light / Airline Theme dark / cool
+set background=dark 
+let g:airline_theme='dark'
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
 " In case it doesn't work, let's try this
@@ -76,6 +76,7 @@ nmap <silent> <F4> :call Light()<CR>
 nmap <silent> <F5> :bp<CR>
 nmap <silent> <F6> :bn<CR>
 nmap <silent> <F7> :b#<CR>
+nmap <silent> <F8> :TagbarToggle<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
@@ -179,7 +180,7 @@ let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
-let g:tagbar_left=1
+let g:tagbar_left=0
 let g:tagbar_width=30
 let g:tagbar_sort=0
 let g:tagbar_compact=1
