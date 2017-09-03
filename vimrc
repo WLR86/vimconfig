@@ -185,6 +185,8 @@ let g:tagbar_width=30
 let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_indent=1
+" Custom Snippets
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 " My custom commands
 command! MakeTags !ctags -R --exclude='*.js' .

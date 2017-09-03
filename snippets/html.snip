@@ -1,0 +1,41 @@
+snippet     f3-token
+abbr        token
+    {{ @${1:TOKEN} }}${0}
+
+snippet     f3-repeat
+abbr        repeat
+    <repeat group="{{ @${1:GROUP} }}" value="{{ @${2:VALUE} }}">
+    ${3}
+    </repeat>
+    ${0}
+
+snippet     f3-check
+abbr        check
+    <check if="{{ ${1:CONDITION} }}">
+        ${2}
+    </check>
+    ${0}
+
+snippet     f3-check-true-false
+abbr        check-true-false
+    <check if="{{ ${1:CONDITION} }}">
+        <true>
+            ${2}
+        </true>
+        <false>
+            ${3}
+        </false>
+    </check>
+    ${0}
+
+snippet     f3-repeat
+abbr        repeat
+    <repeat group="{{ @${1:GROUP} }}" value="{{ @${3:VALUE} }}">
+        ${0}
+    </repeat>
+
+snippet     f3-repeat-key
+abbr        repeat-key
+    <repeat group="{{ @${1:GROUP} }}" key="{{ @${2:KEY} }}" value="{{ @${3:VALUE} }}">
+        ${0}
+    </repeat>
