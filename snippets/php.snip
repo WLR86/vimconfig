@@ -1,0 +1,16 @@
+#   Snippets for PHP FatFree Framework
+#
+
+snippet     f3-get
+    $f3->get('${1:VARNAME}')${0}
+
+snippet     f3-set
+    $f3->set('${1:VARNAME}',${2:VALUE})${0}
+
+snippet     f3-base-instance
+    $f3 = \Base::instance();${0}
+
+snippet     f3-controler-method
+    public function ${1:METHOD}( \Base $f3 ){
+        ${0}
+    }
