@@ -68,18 +68,6 @@ set noautochdir
 set ttimeoutlen=50
 autocmd Filetype php setlocal ts=4 sw=4 noexpandtab noet
 autocmd BufEnter * :syntax sync fromstart
-" My custom keys
-nmap <RightMouse> za
-nmap <silent> <F2> :call ToggleScheme()<CR>
-nmap <silent> <F3> :call Dark()<CR>
-nmap <silent> <F4> :call Light()<CR>
-nmap <silent> <F5> :bp<CR>
-nmap <silent> <F6> :bn<CR>
-nmap <silent> <F7> :b#<CR>
-nmap <silent> <F8> :TagbarToggle<CR>
-nmap <silent> <F12> :AirlineRefresh<CR>
-imap £ ->
-cmap w!! w !sudo tee % >/dev/null
 
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
@@ -225,8 +213,20 @@ function ToggleScheme()
 	endif
 endfunction
 
-
 highlight Cursor gui=reverse term=reverse
 
 " Set font for MacVim
 set guifont=InputMono\ ExLight:h18
+
+" My custom keys
+nmap <RightMouse> za
+nmap <silent> <F3> :call Dark()<CR>
+nmap <silent> <F4> :call Light()<CR>
+nmap <silent> <F5> :bp<CR>
+nmap <silent> <F6> :bn<CR>
+nmap <silent> <F7> :b#<CR>
+nmap <silent> <F8> :TagbarToggle<CR>
+nmap <silent> <F9> :call ToggleScheme()<CR>
+nmap <silent> <F12> :AirlineRefresh<CR>
+imap £ ->
+cmap w!! w !sudo tee % >/dev/null
