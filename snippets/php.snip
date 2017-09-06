@@ -1,104 +1,195 @@
 #   Snippets for PHP FatFree Framework
 #
 
-snippet     f3-base-instance
+snippet	f3-base-instance
     $f3 = \Base::instance();${0:TARGET}
 
-snippet     f3-controler-method
+snippet	f3-controler-method
     public function ${1:METHOD}( \Base $f3 ){
         ${0:TARGET}
     }
 
-snippet     f3-get
+snippet	f3-get
     $f3->get('${1:VARNAME}')${0:TARGET}
 
-snippet     f3-set
+snippet	f3-set
     $f3->set('${1:VARNAME}',${2:VALUE})${0:TARGET}
 
-snippet     f3-copy
+snippet	f3-copy
     $f3->copy('${1:SOURCE}','${2:DESTINATION}')${0:TARGET}
 
-snippet	    f3-sync
+snippet	f3-sync
     $f3->sync('${1:VARNAME}')${0:TARGET}
 
-snippet     f3-ref
+snippet	f3-ref
     &$f3->ref('${1:VARNAME}')${0:TARGET}
 
-snippet     f3-exists
+snippet	f3-exists
     $f3->exists('${1:VARNAME}',${2:VALUE})${0:TARGET}
 
-snippet     f3-devoid
+snippet	f3-devoid
     $f3->devoid('${1:KEY}')${0:TARGET}
 
-snippet     f3-clear
+snippet	f3-clear
     $f3->clear('${1:KEY}')${0:TARGET}
 
-snippet     f3-mset
+snippet	f3-mset
     $f3->mset(${1:ARRAY})${0:TARGET}
 
-snippet     f3-hive
+snippet	f3-hive
     $f3->hive()${0:TARGET}
 
-snippet     f3-flip
+snippet	f3-flip
     $f3->flip('${1:KEY}')${0:TARGET}
 
-snippet     f3-push
+snippet	f3-push
     $f3->push('${1:KEY}',${2:ARRAY})${0:TARGET}
 
-snippet     f3-pop
+snippet	f3-pop
     $f3->pop('${1:KEY}')${0:TARGET}
 
-snippet     f3-unshift
+snippet	f3-unshift
     $f3->unshift('${1:KEY}',${2:VALUE})${0:TARGET}
 
-snippet     f3-shift
+snippet	f3-shift
     $f3->shift('${1:KEY}')${0:TARGET}
 
-snippet     f3-merge
+snippet	f3-merge
     $f3->merge('${1:KEY}',${2:ARRAY})${0:TARGET}
 
-snippet		f3-fixslashes
+snippet	f3-fixslashes
     $f3->fixslashes(${1:VAR})${0:TARGET}
 
-snippet		f3-split
+snippet	f3-split
     $f3->split(${1:STRING})${0:TARGET}
 
-snippet		f3-stringify
+snippet	f3-stringify
     $f3->stringify(${1:ARRAY})${0:TARGET}
 
-snippet		f3-csv
+snippet	f3-csv
     $f3->csv(${1:ARRAY})${0:TARGET}
 
-snippet		f3-camelcase
-	$f3->camelcase(${1:STRING})${0:TARGET}
+snippet	f3-camelcase
+    $f3->camelcase(${1:STRING})${0:TARGET}
 
-snippet		f3-snakecase
-	$f3->snakecase(${1:STRING})${0:TARGET}
+snippet	f3-snakecase
+    $f3->snakecase(${1:STRING})${0:TARGET}
 
-snippet		f3-sign
-	$f3->sign(${1:NUM})${0:TARGET}
+snippet	f3-sign
+    $f3->sign(${1:NUM})${0:TARGET}
 
-snippet		f3-hash
-	$f3->hash(${1:STRING})${0:TARGET}
+snippet	f3-hash
+    $f3->hash(${1:STRING})${0:TARGET}
 
-snippet		f3-base64
-	$f3->base64(${1:STRING},${2:MIME})${0:TARGET}
+snippet	f3-base64
+    $f3->base64(${1:STRING},${2:MIME})${0:TARGET}
 
-snippet		f3-encode
-	$f3->encode(${1:STRING})${0:TARGET}
+snippet	f3-encode
+    $f3->encode(${1:STRING})${0:TARGET}
 
-snippet		f3-decode
-	$f3->decode(${1:STRING})${0:TARGET}
+snippet	f3-decode
+    $f3->decode(${1:STRING})${0:TARGET}
 
-snippet		f3-clean
-	$f3->clean(${1:STRING})${0:TARGET}
+snippet	f3-clean
+    $f3->clean(${1:STRING})${0:TARGET}
 
-snippet		f3-scrub
-	$f3->scrub(${1:STRING})${0:TARGET}
+snippet	f3-scrub
+    $f3->scrub(${1:STRING})${0:TARGET}
 
-snippet		f3-serialize
-	$f3->serialize(${1:STRING})${0:TARGET}
+snippet	f3-serialize
+    $f3->serialize(${1:STRING})${0:TARGET}
 
-snippet		f3-unserialize
-	$f3->unserialize(${1:STRING})${0:TARGET}
+snippet	f3-unserialize
+    $f3->unserialize(${1:STRING})${0:TARGET}
+
+snippet	f3-alias
+        $f3->alias(${1:STRING},${2:StringOrArray})${0:TARGET}
+
+snippet f3-build
+        $f3->build(${1:URL})${0:TARGET}
+
+snippet f3-mock
+        $f3->mock(${1:REQUEST})${0:TARGET}
+
+snippet f3-parse
+        $f3->parse(${1:STRING})${0:TARGET}
+
+snippet f3-route
+        $f3->route(${1:StringOrArray},${2:CALLBACK})${0:TARGET}
+
+snippet f3-reroute
+        $f3->reroute(${1:URL})${0:TARGET}
+
+snippet f3-redirect
+        $f3->redirect(${1:PATTERN},${2:URL})${0:TARGET}
+
+snippet f3-map
+        $f3->map(${1:URL},${2:CLASS})${0:TARGET}
+
+snippet f3-run
+        $f3->run()${0:TARGET}
+
+snippet f3-call
+        $f3->call(${1:CALLBACK})${0:TARGET}
+
+snippet f3-chain
+        $f3->chain(${1:STRING})${0:TARGET}
+
+snippet f3-relay
+        $f3->relay(${1:StringOrArray})${0:TARGET}
+
+snippet f3-mutex
+        $f3->mutex(${1:ID},${2:CALLBACK})${0:TARGET}
+
+snippet f3-read
+        $f3->read(${1:FILENAME})${0:TARGET}
+
+snippet f3-rel
+        $f3->rel(${1:URL})${0:TARGET}
+
+snippet f3-write
+        $f3->write(${1:FILENAME},${2:DATA})${0:TARGET}
+
+snippet f3-instance
+        $f3->instance(${1:STRING})${0:TARGET}
+
+snippet f3-abort
+        $f3->abort(${1:STRING})${0:TARGET}
+
+snippet f3-blacklisted
+        $f3->blacklisted(${1:STRING})${0:TARGET}
+
+snippet f3-compile
+        $f3->compile(${1:STRING})${0:TARGET}
+
+snippet f3-config
+        $f3->config(${1:STRING})${0:TARGET}
+
+snippet f3-constants
+        $f3->constants(${1:STRING})${0:TARGET}
+
+snippet f3-dump
+        $f3->dump(${1:STRING})${0:TARGET}
+
+snippet f3-error
+        $f3->error(${1:STRING})${0:TARGET}
+
+snippet f3-expire
+        $f3->expire(${1:STRING})${0:TARGET}
+
+snippet f3-highlight
+        $f3->highlight(${1:STRING})${0:TARGET}
+
+snippet f3-status
+        $f3->status(${1:STRING})${0:TARGET}
+
+snippet f3-unload
+        $f3->unload(${1:STRING})${0:TARGET}
+
+snippet f3-recursive
+        $f3->recursive(${1:STRING})${0:TARGET}
+
+snippet f3-until
+        $f3->until(${1:STRING})${0:TARGET}
+
 
