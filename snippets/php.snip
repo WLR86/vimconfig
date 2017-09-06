@@ -7,6 +7,49 @@ snippet     f3-get
 snippet     f3-set
     $f3->set('${1:VARNAME}',${2:VALUE})${0:TARGET}
 
+snippet     f3-copy
+    $f3->copy('${1:SOURCE}','${2:DESTINATION}')${0:TARGET}
+
+snippet	    f3-sync
+    $f3->sync('${1:VARNAME}')${0:TARGET}
+
+snippet     f3-ref
+    &$f3->ref('${1:VARNAME}')${0:TARGET}
+
+snippet     f3-exists
+    $f3->exists('${1:VARNAME}',${2:VALUE})${0:TARGET}
+
+snippet     f3-devoid
+    $f3->devoid('${1:KEY}')${0:TARGET}
+
+snippet     f3-clear
+    $f3->clear('${1:KEY}')${0:TARGET}
+
+snippet     f3-mset
+    $f3->mset(${1:ARRAY})${0:TARGET}
+
+snippet     f3-hive
+    $f3->hive()${0:TARGET}
+
+snippet     f3-flip
+    $f3->flip('${1:KEY}')${0:TARGET}
+
+snippet     f3-push
+    $f3->push('${1:KEY}',${2:ARRAY})${0:TARGET}
+
+snippet     f3-pop
+    $f3->pop('${1:KEY}')${0:TARGET}
+
+snippet     f3-unshift
+    $f3->unshift('${1:KEY}',${2:VALUE})${0:TARGET}
+
+snippet     f3-shift
+    $f3->shift('${1:KEY}')${0:TARGET}
+
+snippet     f3-merge
+    $f3->merge('${1:KEY}',${2:ARRAY})${0:TARGET}
+
+
 snippet     f3-base-instance
     $f3 = \Base::instance();${0:TARGET}
 
