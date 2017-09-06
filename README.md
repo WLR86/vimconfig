@@ -23,6 +23,7 @@ sudo apt install vim-nox
 4) Done =)
 
 ## Custom keys
+F2: Toggle paste mode
 F3: Set dark mode
 F4: Set light mode
 F5: Previous Buffer

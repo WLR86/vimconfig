@@ -222,6 +222,7 @@ set guifont=InputMono\ ExLight:h18
 
 " My custom keys
 nmap <RightMouse> za
+set pastetoggle=<F2>
 nmap <silent> <F3> :call Dark()<CR>
 nmap <silent> <F4> :call Light()<CR>
 nmap <silent> <F5> :bp<CR>
