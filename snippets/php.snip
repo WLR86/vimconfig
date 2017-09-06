@@ -1,6 +1,14 @@
 #   Snippets for PHP FatFree Framework
 #
 
+snippet     f3-base-instance
+    $f3 = \Base::instance();${0:TARGET}
+
+snippet     f3-controler-method
+    public function ${1:METHOD}( \Base $f3 ){
+        ${0:TARGET}
+    }
+
 snippet     f3-get
     $f3->get('${1:VARNAME}')${0:TARGET}
 
@@ -49,11 +57,48 @@ snippet     f3-shift
 snippet     f3-merge
     $f3->merge('${1:KEY}',${2:ARRAY})${0:TARGET}
 
+snippet		f3-fixslashes
+    $f3->fixslashes(${1:VAR})${0:TARGET}
 
-snippet     f3-base-instance
-    $f3 = \Base::instance();${0:TARGET}
+snippet		f3-split
+    $f3->split(${1:STRING})${0:TARGET}
 
-snippet     f3-controler-method
-    public function ${1:METHOD}( \Base $f3 ){
-        ${0:TARGET}
-    }
+snippet		f3-stringify
+    $f3->stringify(${1:ARRAY})${0:TARGET}
+
+snippet		f3-csv
+    $f3->csv(${1:ARRAY})${0:TARGET}
+
+snippet		f3-camelcase
+	$f3->camelcase(${1:STRING})${0:TARGET}
+
+snippet		f3-snakecase
+	$f3->snakecase(${1:STRING})${0:TARGET}
+
+snippet		f3-sign
+	$f3->sign(${1:NUM})${0:TARGET}
+
+snippet		f3-hash
+	$f3->hash(${1:STRING})${0:TARGET}
+
+snippet		f3-base64
+	$f3->base64(${1:STRING},${2:MIME})${0:TARGET}
+
+snippet		f3-encode
+	$f3->encode(${1:STRING})${0:TARGET}
+
+snippet		f3-decode
+	$f3->decode(${1:STRING})${0:TARGET}
+
+snippet		f3-clean
+	$f3->clean(${1:STRING})${0:TARGET}
+
+snippet		f3-scrub
+	$f3->scrub(${1:STRING})${0:TARGET}
+
+snippet		f3-serialize
+	$f3->serialize(${1:STRING})${0:TARGET}
+
+snippet		f3-unserialize
+	$f3->unserialize(${1:STRING})${0:TARGET}
+
