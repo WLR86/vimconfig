@@ -27,7 +27,7 @@ set t_ut=
 let g:gruvbox_inverse=0
 let g:gruvbox_improved_strings=0
 silent! colorscheme gruvbox
-
+silent! colorscheme PaperColor
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
@@ -66,9 +66,13 @@ set showcmd
 set shiftwidth=4
 set noautochdir
 set ttimeoutlen=50
-autocmd Filetype php setlocal ts=4 sw=4 noexpandtab noet
+autocmd Filetype php setlocal ts=4 sw=4 noexpandtab
+autocmd FileType php call SetPHPOptions()
 autocmd BufEnter * :syntax sync fromstart
 
+function! SetPHPOptions()
+	TagbarToggle
+endfunction
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
