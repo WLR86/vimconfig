@@ -25,4 +25,5 @@ Plugin 'bonsaiben/bootstrap-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'Tagbar'
+Plugin 'zhou13/vim-easyescape'
 call vundle#end()
