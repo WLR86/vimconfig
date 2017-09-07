@@ -40,6 +40,8 @@ let g:airline_left_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
+" Doesn't play well with Airline (Status bar gets rewritten by Tagbar)
+let g:airline#extensions#tagbar#enabled = 0
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
@@ -66,12 +68,13 @@ set showcmd
 set shiftwidth=4
 set noautochdir
 set ttimeoutlen=50
-autocmd Filetype php setlocal ts=4 sw=4 noexpandtab
+autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd FileType php call SetPHPOptions()
 autocmd BufEnter * :syntax sync fromstart
 
 function! SetPHPOptions()
-	TagbarToggle
+	TagbarOpen
+"	AirlineRefresh
 endfunction
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
