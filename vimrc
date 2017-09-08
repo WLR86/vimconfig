@@ -241,3 +241,6 @@ nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
+
+" Override this config if needed
+source ~/vimconfig/override_vimrc
