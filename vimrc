@@ -68,6 +68,7 @@ set showcmd
 set shiftwidth=4
 set noautochdir
 set ttimeoutlen=50
+set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd FileType php call SetPHPOptions()
 autocmd BufEnter * :syntax sync fromstart
