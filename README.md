@@ -44,3 +44,7 @@ Seek and delete blank characters at EOL
 ```
 command! TrimWhiteSpaces %s/\s\+$//g
 ```
+
+## Overriding provided config
+If something in the config isn't working properly on a given machine, you can override settings by using a file named 'override_vimrc'.
+Simply create this file and add the various settings you like to change in it. It will be loaded automatically at startup. The idea here is to have a way to stay synced with this github branch, while preserving the ability to make some per-host modifications if needed/required.
