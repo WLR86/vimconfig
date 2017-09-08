@@ -228,6 +228,12 @@ highlight Cursor gui=reverse term=reverse
 " Set font for MacVim
 set guifont=InputMono\ ExLight:h18
 
+" Easy-escape
+let g:easyescape_chars = { "j": 1, "k": 1  }
+let g:easyescape_timeout = 400
+cnoremap jk <ESC>
+cnoremap kj <ESC>
+
 " My custom keys
 nmap <RightMouse> za
 set pastetoggle=<F2>
