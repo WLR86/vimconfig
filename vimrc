@@ -243,4 +243,9 @@ imap £ ->
 cmap w!! w !sudo tee % >/dev/null
 
 " Override this config if needed
-source ~/vimconfig/override_vimrc
+try
+	source ~/vimconfig/override_vimrc
+catch
+	" No override_vimrc file found,
+	" Let's ignore it
+endtry
