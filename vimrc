@@ -230,7 +230,7 @@ set guifont=InputMono\ ExLight:h18
 
 " Easy-escape
 let g:easyescape_chars = { "j": 1, "k": 1  }
-let g:easyescape_timeout = 400
+let g:easyescape_timeout = 2100
 cnoremap jk <ESC>
 cnoremap kj <ESC>
 
