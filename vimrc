@@ -1,6 +1,6 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
-let g:airline_theme='dark'
+let g:airline_theme='powerlineish'
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
 " In case it doesn't work, let's try this
@@ -255,3 +255,7 @@ catch
 	" No override_vimrc file found,
 	" Let's ignore it
 endtry
+
+" Let's debug this shit
+profile start /tmp/bordelDeMerde
+profile func *
