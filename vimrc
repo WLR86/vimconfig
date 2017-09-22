@@ -257,5 +257,5 @@ catch
 endtry
 
 " Let's debug this shit
-profile start /tmp/bordelDeMerde
-profile func *
+" profile start /tmp/bordelDeMerde
+" profile func *
