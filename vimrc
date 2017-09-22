@@ -1,6 +1,6 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
-let g:airline_theme='powerlineish'
+let g:airline_theme='dark'
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
 " In case it doesn't work, let's try this
