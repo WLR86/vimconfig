@@ -26,4 +26,5 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'zhou13/vim-easyescape'
 Plugin 'Tagbar'
+Plugin 'matchit.zip'
 call vundle#end()
