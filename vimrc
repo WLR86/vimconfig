@@ -170,7 +170,7 @@ if has('conceal')
 endif
 
 "Prevent vim from moving cursor to the left when leaving Insert mode
-"au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
+au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
 let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
