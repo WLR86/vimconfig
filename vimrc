@@ -170,7 +170,7 @@ if has('conceal')
 endif
 
 "Prevent vim from moving cursor to the left when leaving Insert mode
-au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
+" au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
 let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
@@ -237,10 +237,14 @@ set guicursor+=i:ver100-iCursor
 set guifont=InputMono\ ExLight:h18
 
 " Easy-escape
-let g:easyescape_chars = { "j": 1, "k": 1  }
+let g:easyescape_chars = { "j": 2 }
 let g:easyescape_timeout = 2100
-cnoremap jk <ESC>
-cnoremap kj <ESC>
+cnoremap jj <Esc>`^
+" cnoremap jk <ESC>
+" cnoremap kj <ESC>
+" set virtualedit=onemore
+" inoremap <Esc> <Esc>`^
+inoremap jj <Esc>`^
 
 " My custom keys
 nmap <RightMouse> za
@@ -255,7 +259,7 @@ nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
-
+"imap jj <Esc>
 
 " Override this config if needed
 try
