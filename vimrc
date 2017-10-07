@@ -223,7 +223,15 @@ function ToggleScheme()
 	endif
 endfunction
 
+
+" Custom GUI settings
 highlight Cursor gui=reverse term=reverse
+highlight Cursor guifg=yellow guibg=black
+highlight iCursor guifg=white guibg=blue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+" set guicursor+=n-v-c:blinkon0
+" set guicursor+=i:blinkwait10
 
 " Set font for MacVim
 set guifont=InputMono\ ExLight:h18
@@ -247,6 +255,7 @@ nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
+
 
 " Override this config if needed
 try
