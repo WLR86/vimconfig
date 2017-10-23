@@ -1,8 +1,13 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
 let g:airline_theme='dark'
+
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
+" In case no colors can be seen, add This
+" to override_vimrc :
+" silent! set termguicolors!
+
 " In case it doesn't work, let's try this
 "let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 "let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
