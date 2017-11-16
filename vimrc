@@ -14,6 +14,7 @@ silent! set termguicolors
 set nocompatible
 filetype off
 set encoding=utf-8
+set scrolloff=2
 " Not sure this is needed anymore
 "set t_Co=256
 let php_folding=0
