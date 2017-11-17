@@ -28,4 +28,5 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'zhou13/vim-easyescape'
 Plugin 'Tagbar'
 Plugin 'matchit.zip'
+Plugin 'vim-scripts/nextval'
 call vundle#end()
