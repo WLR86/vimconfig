@@ -281,6 +281,6 @@ catch
 	" Let's ignore it
 endtry
 
-" Let's debug this shit
-" profile start /tmp/bordelDeMerde
+" Debug if needed
+" profile start /tmp/vimprofile
 " profile func *
