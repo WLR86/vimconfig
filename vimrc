@@ -34,6 +34,8 @@ let g:gruvbox_inverse=0
 let g:gruvbox_improved_strings=0
 silent! colorscheme gruvbox
 silent! colorscheme PaperColor
+highlight Normal ctermbg=NONE
+
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
