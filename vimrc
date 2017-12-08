@@ -193,7 +193,7 @@ command! MakeTags !ctags -R --exclude='*.js' .
 command! TrimWhiteSpaces %s/\s\+$//g
 
 " Allow moving/resizing splits using mouse inside a Tmux session
-set ttymouse=xterm2
+silent! set ttymouse=xterm2
 
 " Highlight White Spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
