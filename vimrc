@@ -1,14 +1,20 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
 let g:airline_theme='dark'
+
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
+" In case no colors can be seen, add This
+" to override_vimrc :
+" silent! set termguicolors!
+
 " In case it doesn't work, let's try this
 "let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 "let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 set nocompatible
 filetype off
 set encoding=utf-8
+set scrolloff=2
 " Not sure this is needed anymore
 "set t_Co=256
 let php_folding=0
@@ -28,6 +34,8 @@ let g:gruvbox_inverse=0
 let g:gruvbox_improved_strings=0
 silent! colorscheme gruvbox
 silent! colorscheme PaperColor
+highlight Normal ctermbg=NONE
+
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
@@ -154,6 +162,10 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+" nextval mappings
+nmap <silent> <unique> + <Plug>nextvalInc
+nmap <silent> <unique> - <Plug>nextvalDec
+
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -269,6 +281,6 @@ catch
 	" Let's ignore it
 endtry
 
-" Let's debug this shit
-" profile start /tmp/bordelDeMerde
+" Debug if needed
+" profile start /tmp/vimprofile
 " profile func *
