@@ -1,6 +1,7 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
-let g:airline_theme='dark'
+"let g:airline_theme='dark'
+let g:airline_theme='powerlineish'
 
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
@@ -34,7 +35,7 @@ let g:gruvbox_inverse=0
 let g:gruvbox_improved_strings=0
 silent! colorscheme gruvbox
 silent! colorscheme PaperColor
-highlight Normal ctermbg=NONE
+"highlight Normal ctermbg=NONE
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
@@ -221,7 +222,8 @@ let g:airline#extensions#tmuxline#enabled=1
 " Toggle between predefined dark and light mode
 function Dark()
 	set background=dark
-	AirlineTheme dark
+	" AirlineTheme dark
+	AirlineTheme powerlineish
 endfunction
 function Light()
 	set background=light
@@ -252,10 +254,6 @@ set guifont=InputMono\ ExLight:h18
 let g:easyescape_chars = { "j": 2 }
 let g:easyescape_timeout = 2100
 cnoremap jj <Esc>`^
-" cnoremap jk <ESC>
-" cnoremap kj <ESC>
-" set virtualedit=onemore
-" inoremap <Esc> <Esc>`^
 inoremap jj <Esc>`^
 
 " My custom keys

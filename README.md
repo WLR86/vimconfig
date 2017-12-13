@@ -31,6 +31,7 @@ F6: Next Buffer
 F7: Switch last two Buffers
 F8: Toggle Tagbar
 F9: Toggle dark/light mode
+F12: Redraw Airline
 
 ## Custom commands available:
 
