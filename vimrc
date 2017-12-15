@@ -1,6 +1,6 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
-" Nice Themes : dark, powerlineish, ubaryd, wombat, badwolf, tomorrow, lucius, tomorrow
+" Nice Themes : dark, powerlineish, ubaryd, wombat, badwolf, tomorrow, lucius
 
 let g:dark_airline_theme='tomorrow'
 let g:light_airline_theme='cool'
