@@ -71,6 +71,11 @@ set nospell
 set nolist
 set cursorline
 set noexpandtab
+set wildmenu
+set wildmode=longest:full
+set ttyfast
+set hidden
+set complete=.,w,b,u,U,t,i,d
 set noet
 set ts=4
 set showcmd
@@ -163,8 +168,8 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " nextval mappings
-noremap! <silent> <unique> + <Plug>nextvalInc
-noremap! <silent> <unique> - <Plug>nextvalDec
+nmap <silent> + <Plug>nextvalInc
+nmap <silent> - <Plug>nextvalDec
 
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
@@ -268,7 +273,15 @@ nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
-"imap jj <Esc>
+nmap <leader>v	:e ~/.vimrc<CR>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Override this config if needed
 try
