@@ -133,6 +133,12 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " AutoComplPop like behavior.
 let g:neocomplete#enable_auto_select = 1
 
+" deoplete
+if has('nvim')
+	let g:python_host_prog = '/usr/bin/python'
+	let g:python3_host_prog = '/usr/bin/python3'
+	let g:deoplete#enable_at_startup = 1
+endif
 " Shell like behavior(not recommended).
 "set completeopt+=longest
 "let g:neocomplete#enable_auto_select = 1

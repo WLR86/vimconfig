@@ -11,7 +11,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'Shougo/neocomplete.vim'
+if has('nvim')
+	Plugin 'Shougo/deoplete.nvim'
+else
+	Plugin 'Shougo/neocomplete.vim'
+endif
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Auto-Pairs'
