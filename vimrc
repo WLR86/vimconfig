@@ -1,7 +1,11 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
-"let g:airline_theme='dark'
-let g:airline_theme='powerlineish'
+" Nice Themes : dark, powerlineish, ubaryd, wombat, badwolf, tomorrow, lucius
+
+let g:dark_airline_theme='tomorrow'
+let g:light_airline_theme='cool'
+
+let g:airline_theme=g:dark_airline_theme
 
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
@@ -9,15 +13,11 @@ silent! set termguicolors
 " to override_vimrc :
 " silent! set termguicolors!
 
-" In case it doesn't work, let's try this
-"let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
-"let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 set nocompatible
 filetype off
 set encoding=utf-8
 set scrolloff=2
-" Not sure this is needed anymore
-"set t_Co=256
+
 let php_folding=0
 
 let mapleader=","
@@ -30,7 +30,7 @@ set number
 set mouse=a
 " clearing uses the current background color
 set t_ut=
-" gruvbox
+" gruvbox theme settings
 let g:gruvbox_inverse=0
 let g:gruvbox_improved_strings=0
 silent! colorscheme gruvbox
@@ -69,8 +69,13 @@ set laststatus=2
 
 set nospell
 set nolist
-set nocursorline
+set cursorline
 set noexpandtab
+set wildmenu
+set wildmode=longest:full
+set ttyfast
+set hidden
+set complete=.,w,b,u,U,t,i,d
 set noet
 set ts=4
 set showcmd
@@ -84,7 +89,6 @@ autocmd BufEnter * :syntax sync fromstart
 
 function! SetPHPOptions()
 	TagbarOpen
-"	AirlineRefresh
 endfunction
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
@@ -170,8 +174,8 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " nextval mappings
-nmap <silent> <unique> + <Plug>nextvalInc
-nmap <silent> <unique> - <Plug>nextvalDec
+nmap <silent> + <Plug>nextvalInc
+nmap <silent> - <Plug>nextvalDec
 
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
@@ -226,16 +230,16 @@ autocmd BufWinLeave * call clearmatches()
 let g:airline#extensions#tmuxline#enabled=1
 
 " Toggle between predefined dark and light mode
-function Dark()
+function! Dark()
 	set background=dark
 	" AirlineTheme dark
-	AirlineTheme powerlineish
+	AirlineTheme g:dark_airline_theme
 endfunction
-function Light()
+function! Light()
 	set background=light
-	AirlineTheme cool
+	AirlineTheme g:light_airline_theme
 endfunction
-function ToggleScheme()
+function! ToggleScheme()
 	if &background=='dark'
 		call Light()
 	else
@@ -275,7 +279,15 @@ nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
-"imap jj <Esc>
+nmap <leader>v	:e ~/.vimrc<CR>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Override this config if needed
 try

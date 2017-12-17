@@ -32,6 +32,8 @@ F7: Switch last two Buffers
 F8: Toggle Tagbar
 F9: Toggle dark/light mode
 F12: Redraw Airline
+jj: Quick Retun to Normal Mode from Insert Mode
+,v: Open .vimrc
 
 ## Custom commands available:
 
