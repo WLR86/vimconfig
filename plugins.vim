@@ -13,6 +13,7 @@ Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'shawncplus/phpcomplete.vim'
 if has('nvim')
 	Plugin 'Shougo/deoplete.nvim'
+	Plugin 'lvht/phpcd.vim'
 else
 	Plugin 'Shougo/neocomplete.vim'
 endif
