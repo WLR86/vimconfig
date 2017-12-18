@@ -1,7 +1,7 @@
 # vimconfig
 My personal ViM config
 
-I'm a ViM lover, although I used and tested a whole bunch of text editors and IDEs, ViM is still my favorite tool.
+I'm a Vim lover, although I used and tested a whole bunch of text editors and IDEs, ViM is still my favorite tool.
 This repo allows me to deploy my ViM env to all my servers/machines.
 
 I mostly do LAMP dev and sysadmin tasks on Debian 7/8/9 servers, so if you think
@@ -9,11 +9,17 @@ it might suit your needs too, feel free to clone it :).
 
 This vimrc works also fine on my Mac, using MacVim and vim on this platform.
 
-Update:
-NeoComplete and NeoSnippet are now included.
+*Update:*
+Deoplete (Neovim), NeoComplete (Vim 8 et Vim 7.4) and NeoSnippet are now included.
 Note that NeoComplete requires vim to be compiled with LUA support - installing vim-nox package takes care of this :
 ```
 sudo apt install vim-nox
+```
+
+Deoplete requires Python3 and Neovim Python3 module :
+```
+sudo apt install python3 python3-pip
+sudo pip3 install neovim
 ```
 
 ## How to install :
@@ -23,17 +29,17 @@ sudo apt install vim-nox
 4) Done =)
 
 ## Custom keys
-F2: Toggle paste mode
-F3: Set dark mode
-F4: Set light mode
-F5: Previous Buffer
-F6: Next Buffer
-F7: Switch last two Buffers
-F8: Toggle Tagbar
-F9: Toggle dark/light mode
-F12: Redraw Airline
-jj: Quick Retun to Normal Mode from Insert Mode
-,v: Open .vimrc
+- F2: Toggle paste mode
+- F3: Set dark mode
+- F4: Set light mode
+- F5: Previous Buffer
+- F6: Next Buffer
+- F7: Switch last two Buffers
+- F8: Toggle Tagbar
+- F9: Toggle dark/light mode
+- F12: Redraw Airline
+- jj: Quick Retun to Normal Mode from Insert Mode
+- ,v: Open .vimrc
 
 ## Custom commands available:
 
