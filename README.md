@@ -23,17 +23,17 @@ sudo apt install vim-nox
 4) Done =)
 
 ## Custom keys
-F2: Toggle paste mode
-F3: Set dark mode
-F4: Set light mode
-F5: Previous Buffer
-F6: Next Buffer
-F7: Switch last two Buffers
-F8: Toggle Tagbar
-F9: Toggle dark/light mode
-F12: Redraw Airline
-jj: Quick Retun to Normal Mode from Insert Mode
-,v: Open .vimrc
+	- F2: Toggle paste mode
+	- F3: Set dark mode
+	- F4: Set light mode
+	- F5: Previous Buffer
+	- F6: Next Buffer
+	- F7: Switch last two Buffers
+	- F8: Toggle Tagbar
+	- F9: Toggle dark/light mode
+	- F12: Redraw Airline
+	- jj: Quick Retun to Normal Mode from Insert Mode
+	- ,v: Open .vimrc
 
 ## Custom commands available:
 
