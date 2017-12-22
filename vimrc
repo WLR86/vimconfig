@@ -2,7 +2,7 @@
 set background=dark
 " Nice Themes : dark, powerlineish, ubaryd, wombat, badwolf, tomorrow, lucius
 
-let g:dark_airline_theme='tomorrow'
+let g:dark_airline_theme='powerlineish'
 let g:light_airline_theme='cool'
 
 let g:airline_theme=g:dark_airline_theme
@@ -50,7 +50,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 " Doesn't play well with Airline (Status bar gets rewritten by Tagbar)
-let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#tagbar#enabled = 1
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
@@ -72,7 +72,7 @@ set nolist
 set cursorline
 set noexpandtab
 set wildmenu
-set wildmode=longest:full
+set wildmode=full
 set ttyfast
 set hidden
 set complete=.,w,b,u,U,t,i,d
