@@ -84,6 +84,7 @@ set noautochdir
 set ttimeoutlen=50
 set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
+" autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType php call SetPHPOptions()
 autocmd BufEnter * :syntax sync fromstart
 
@@ -136,6 +137,17 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " AutoComplPop like behavior.
 let g:neocomplete#enable_auto_select = 1
+
+" stephpy/vim-php-cs-fixer
+" If you use php-cs-fixer version 2.x
+let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+"let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
+"let g:php_cs_fixer_config_file = '.php_cs' " options: --config
+" End of php-cs-fixer version 2 config params
+let g:php_cs_fixer_php_path = "/usr/bin/php"               " Path to PHP
+let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
 
 " deoplete
 if has('nvim')
