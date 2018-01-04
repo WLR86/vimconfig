@@ -31,9 +31,9 @@ set mouse=a
 " clearing uses the current background color
 set t_ut=
 " gruvbox theme settings
-let g:gruvbox_inverse=0
-let g:gruvbox_improved_strings=0
-silent! colorscheme gruvbox
+" let g:gruvbox_inverse=0
+" let g:gruvbox_improved_strings=0
+"silent! colorscheme gruvbox
 silent! colorscheme PaperColor
 "highlight Normal ctermbg=NONE
 
