@@ -3,6 +3,6 @@
 git checkout master
 git pull
 
-vim +PluginInstall +qa
+vim +PluginUpdate +PluginInstall +qa
 echo Done.
 
