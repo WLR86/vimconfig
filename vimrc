@@ -86,6 +86,7 @@ set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 " autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType php call SetPHPOptions()
+autocmd FileType sh TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
 
 function! SetPHPOptions()
@@ -293,15 +294,12 @@ nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
+" Press ,v to edit .vimrc
 nmap <leader>v	:e ~/.vimrc<CR>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
 
 " Override this config if needed
 try
