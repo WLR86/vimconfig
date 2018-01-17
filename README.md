@@ -53,6 +53,11 @@ Seek and delete blank characters at EOL
 ```
 command! TrimWhiteSpaces %s/\s\+$//g
 ```
+### w!! (mapping)
+Write file when forgot to use sudo
+```
+cmap w!! w !sudo tee % >/dev/null
+```
 
 ## Overriding provided config
 If something in the config isn't working properly on a given machine, you can override settings by using a file named 'override_vimrc'.
