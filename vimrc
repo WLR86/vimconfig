@@ -88,7 +88,7 @@ autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd FileType php call SetPHPOptions()
 autocmd FileType sh TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
-
+autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 function! SetPHPOptions()
 	TagbarOpen
 endfunction
