@@ -52,6 +52,12 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 " Doesn't play well with Airline (Status bar gets rewritten by Tagbar)
 let g:airline#extensions#tagbar#enabled = 1
 
+" Comment if not using NerdFont
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.branch = ''
+
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
