@@ -64,8 +64,9 @@ let g:airline_symbols.branch = ''
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
 " Syntastic
+let g:airline#extensions#syntastic#enabled = 1
 let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_warning_symbol = "!"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -94,6 +95,7 @@ autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 " autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType php call SetPHPOptions()
 autocmd FileType sh TagbarOpen
+autocmd FileType python TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 function! SetPHPOptions()
