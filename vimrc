@@ -94,8 +94,7 @@ set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 " autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType php call SetPHPOptions()
-autocmd FileType sh TagbarOpen
-autocmd FileType python TagbarOpen
+autocmd FileType * TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 function! SetPHPOptions()
