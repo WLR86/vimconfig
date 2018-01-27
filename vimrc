@@ -52,7 +52,7 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 " Doesn't play well with Airline (Status bar gets rewritten by Tagbar)
 let g:airline#extensions#tagbar#enabled = 1
-
+let g:airline_inactive_collapse=0
 " Comment if not using NerdFont
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -94,7 +94,7 @@ set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 " autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType php call SetPHPOptions()
-autocmd FileType * TagbarOpen
+autocmd FileType php,c,sh,python,perl nested :TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 function! SetPHPOptions()
