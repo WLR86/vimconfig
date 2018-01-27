@@ -94,7 +94,8 @@ set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 " autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType php call SetPHPOptions()
-autocmd FileType php,c,sh,python,perl nested :TagbarOpen
+" autocmd FileType php,c,sh,python,perl nested :TagbarOpen
+autocmd FileType * nested :TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 function! SetPHPOptions()
@@ -227,6 +228,8 @@ let g:tagbar_width=30
 let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_indent=1
+let g:tagbar_show_linenumbers=0
+let g:tagbar_autopreview = 0
 " Custom Snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#expand_word_boundary=1
@@ -257,10 +260,12 @@ function! Dark()
 	set background=dark
 	" AirlineTheme dark
 	AirlineTheme g:dark_airline_theme
+	AirlineRefresh
 endfunction
 function! Light()
 	set background=light
 	AirlineTheme g:light_airline_theme
+	AirlineRefresh
 endfunction
 function! ToggleScheme()
 	if &background=='dark'
