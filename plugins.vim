@@ -34,7 +34,7 @@ Plugin 'Tagbar'
 Plugin 'matchit.zip'
 Plugin 'vim-scripts/nextval'
 Plugin 'sieve.vim'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
