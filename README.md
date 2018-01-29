@@ -10,7 +10,8 @@ it might suit your needs too, feel free to clone it :).
 This vimrc works also fine on my Mac, using MacVim and vim/NeoVim on this platform.
 
 *Update:*
-This config now uses [vim-nerdfont] (https://github.com/ryanoasis/vim-devicons) to add some fancy icons
+This config now uses [vim-nerdfont] (https://github.com/ryanoasis/vim-devicons) to add some fancy icons.
+You can enable/disable this by setting g:devicons_enabled to 1/0 in override_vimrc (This is enabled by default).
 Deoplete (Neovim), NeoComplete (Vim 8 et Vim 7.4) and NeoSnippet are now included.
 Note that NeoComplete requires vim to be compiled with LUA support - installing vim-nox package takes care of this :
 ```

@@ -36,5 +36,7 @@ Plugin 'vim-scripts/nextval'
 Plugin 'sieve.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ryanoasis/vim-devicons'
+if (g:nerdfont_enabled)
+	Plugin 'ryanoasis/vim-devicons'
+endif
 call vundle#end()

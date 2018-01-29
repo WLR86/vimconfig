@@ -1,11 +1,16 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
 " Nice Themes : dark, powerlineish, ubaryd, wombat, badwolf, tomorrow, lucius
-
 let g:dark_airline_theme='powerlineish'
 let g:light_airline_theme='cool'
 
 let g:airline_theme=g:dark_airline_theme
+
+" Decide whether or not we want to have vim-devicons enabled
+" REQUIRES Nerd Font installed
+" If you don't want this by default, set the following var to 0
+" in override_vimrc
+let g:nerdfont_enabled=1
 
 " Let's use same colors as GUI, if possible
 silent! set termguicolors
