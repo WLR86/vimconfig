@@ -43,7 +43,8 @@ let g:NERDSpaceDelims = 1
 
 " Vim-Airline Cfg
 let g:airline_powerline_fonts = 1
-let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . " \uE0A3" . '%{col(".")}'])
+" This lead to glitches (at least on Mac)
+" let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . " \uE0A3" . '%{col(".")}'])
 let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
@@ -237,7 +238,7 @@ let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
 let g:tagbar_left=0
-let g:tagbar_width=40
+let g:tagbar_width=30
 let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_indent=1
@@ -272,14 +273,11 @@ let g:tmuxline_powerline_separators = 1
 " Toggle between predefined dark and light mode
 function! Dark()
 	set background=dark
-	" AirlineTheme dark
-	AirlineTheme g:dark_airline_theme
-	AirlineRefresh
+	let g:airline_theme=g:dark_airline_theme
 endfunction
 function! Light()
 	set background=light
-	AirlineTheme g:light_airline_theme
-	AirlineRefresh
+	let g:airline_theme=g:light_airline_theme
 endfunction
 function! ToggleScheme()
 	if &background=='dark'
@@ -287,6 +285,9 @@ function! ToggleScheme()
 	else
 		call Dark()
 	endif
+	" Somehow this is needed twice (only once gives glitches)
+	AirlineRefresh
+	AirlineRefresh
 endfunction
 
 
@@ -311,6 +312,7 @@ inoremap jj <Esc>`^
 " My custom keys
 nmap <RightMouse> za
 set pastetoggle=<F2>
+nmap <silent> <F2> :set paste<CR>:
 nmap <silent> <F3> :call Dark()<CR>
 nmap <silent> <F4> :call Light()<CR>
 nmap <silent> <F5> :bp<CR>
