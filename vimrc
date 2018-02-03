@@ -35,10 +35,6 @@ set number
 set mouse=a
 " clearing uses the current background color
 set t_ut=
-" gruvbox theme settings
-" let g:gruvbox_inverse=0
-" let g:gruvbox_improved_strings=0
-"silent! colorscheme gruvbox
 silent! colorscheme PaperColor
 "highlight Normal ctermbg=NONE
 
@@ -47,10 +43,22 @@ let g:NERDSpaceDelims = 1
 
 " Vim-Airline Cfg
 let g:airline_powerline_fonts = 1
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . " \uE0A3" . '%{col(".")}'])
 let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
+" Rounded
+" let g:airline_left_sep = "\uE0B4"
+" let g:airline_right_sep = "\uE0B6"
+" let g:airline_right_alt_sep = "\uE0B7"
+" let g:airline_left_alt_sep = "\uE0B5"
+" Flames
+" let g:airline_left_sep = "\uE0C0"
+" let g:airline_right_sep = "\uE0C2"
+" let g:airline_right_alt_sep = "\uE0C3"
+" let g:airline_left_alt_sep = "\uE0C1"
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#left_sep = ''
@@ -229,7 +237,7 @@ let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
 let php_noShortTags = 1    "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
 let g:tagbar_left=0
-let g:tagbar_width=60
+let g:tagbar_width=40
 let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_indent=1
@@ -259,6 +267,7 @@ autocmd BufWinLeave * call clearmatches()
 
 " tmuxline
 let g:airline#extensions#tmuxline#enabled=1
+let g:tmuxline_powerline_separators = 1
 
 " Toggle between predefined dark and light mode
 function! Dark()
