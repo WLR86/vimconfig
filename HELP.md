@@ -40,6 +40,7 @@ navigating split screens                 CTRL + w + j = move down a screen
                                          CTRL + w + l = move right a screen
 close all other split screens            :only
 go back to previous cursor position		 g;
+move screen up, middle or bottom		 zt zz zb
 
 *  - As with other commands in vi, you can playback a macro any number of times.
      The following command would playback the macro assigned to the key `w' 100
