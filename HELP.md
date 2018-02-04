@@ -1,4 +1,4 @@
-// vim set expandtab set ts=41:
+// vim: set expandtab ts=41:
 # Vim Basics
 
 (from [This link] (https://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier#1278802) )
