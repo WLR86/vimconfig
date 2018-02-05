@@ -106,15 +106,12 @@ set noautochdir
 set ttimeoutlen=50
 set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
-" autocmd FileType php setlocal sw=4 sts=4 et
-autocmd FileType php call SetPHPOptions()
-" autocmd FileType php,c,sh,python,perl nested :TagbarOpen
 autocmd FileType * nested :TagbarOpen
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
-function! SetPHPOptions()
-	TagbarOpen
-endfunction
+" Close NERDTree if it's the last buffer opened
+" Doesn't work : isTabTree() - doesn't exit in the dictionary
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
@@ -311,6 +308,7 @@ inoremap jj <Esc>`^
 
 " My custom keys
 nmap <RightMouse> za
+map <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
 nmap <silent> <F2> :set paste<CR>:
 nmap <silent> <F3> :call Dark()<CR>

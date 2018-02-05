@@ -33,6 +33,7 @@ Plugin 'Tagbar'
 Plugin 'matchit.zip'
 Plugin 'vim-scripts/nextval'
 Plugin 'sieve.vim'
+Plugin 'The-NERD-tree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 if (g:nerdfont_enabled)
