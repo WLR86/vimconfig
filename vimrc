@@ -1,8 +1,8 @@
 " Set default dark/light / Airline Theme dark / cool
 set background=dark
 " Nice Themes : dark, powerlineish, ubaryd, wombat, badwolf, tomorrow, lucius
-let g:dark_airline_theme='powerlineish'
-let g:light_airline_theme='cool'
+let g:dark_airline_theme  = 'powerlineish'
+let g:light_airline_theme = 'cool'
 
 let g:airline_theme=g:dark_airline_theme
 
@@ -36,40 +36,37 @@ set mouse=a
 " clearing uses the current background color
 set t_ut=
 silent! colorscheme PaperColor
-"highlight Normal ctermbg=NONE
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
 " Vim-Airline Cfg
 let g:airline_powerline_fonts = 1
-" This lead to glitches (at least on Mac)
-" let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . " \uE0A3" . '%{col(".")}'])
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
+let g:airline_right_alt_sep   = ''
+let g:airline_right_sep       = ''
+let g:airline_left_alt_sep    = ''
+let g:airline_left_sep        = ''
 " Rounded
-" let g:airline_left_sep = "\uE0B4"
-" let g:airline_right_sep = "\uE0B6"
+" let g:airline_left_sep      = "\uE0B4"
+" let g:airline_right_sep     = "\uE0B6"
 " let g:airline_right_alt_sep = "\uE0B7"
-" let g:airline_left_alt_sep = "\uE0B5"
+" let g:airline_left_alt_sep  = "\uE0B5"
 " Flames
-" let g:airline_left_sep = "\uE0C0"
-" let g:airline_right_sep = "\uE0C2"
+" let g:airline_left_sep      = "\uE0C0"
+" let g:airline_right_sep     = "\uE0C2"
 " let g:airline_right_alt_sep = "\uE0C3"
-" let g:airline_left_alt_sep = "\uE0C1"
+" let g:airline_left_alt_sep  = "\uE0C1"
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_sep     = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-" Doesn't play well with Airline (Status bar gets rewritten by Tagbar)
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_inactive_collapse=0
+
 " Comment if not using NerdFont
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch = ''
 
@@ -79,12 +76,12 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
 " Syntastic
 let g:airline#extensions#syntastic#enabled = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "!"
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_error_symbol               = "✗"
+let g:syntastic_warning_symbol             = "!"
+let g:syntastic_always_populate_loc_list   = 1
+let g:syntastic_auto_loc_list              = 1
+let g:syntastic_check_on_open              = 1
+let g:syntastic_check_on_wq                = 1
 
 " Make Airline appear
 set laststatus=2
@@ -111,30 +108,25 @@ if !&diff
 endif
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
-" Close NERDTree if it's the last buffer opened
-" Doesn't work : isTabTree() - doesn't exit in the dictionary
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
+let g:neocomplete#enable_at_startup                 = 1
+let g:neocomplete#enable_smart_case                 = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-	\ 'default' : '',
-	\ 'vimshell' : $HOME.'/.vimshell_hist',
-	\ 'scheme' : $HOME.'/.gosh_completions'
-	\ }
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+    \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
-	let g:neocomplete#keyword_patterns = {}
+    let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -146,9 +138,9 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-	"return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-	" For no inserting <CR> key.
-	return pumvisible() ? "\<C-y>" : "\<CR>"
+    "return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+    " For no inserting <CR> key.
+    return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -167,24 +159,19 @@ let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
 "let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
 "let g:php_cs_fixer_config_file = '.php_cs' " options: --config
 " End of php-cs-fixer version 2 config params
-let g:php_cs_fixer_php_path = "/usr/bin/php"               " Path to PHP
-let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
-let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
-let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
+let g:php_cs_fixer_php_path = "/usr/bin/php"   " Path to PHP
+let g:php_cs_fixer_enable_default_mapping = 1  " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                 " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                 " Return the output of command if 1, else an inline information.
 
 " deoplete
 if has('nvim')
-	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '/usr/bin/python3'
-	let g:deoplete#enable_at_startup = 1
-	let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-	let g:deoplete#ignore_sources.php = ['omni']
+    let g:python_host_prog = '/usr/bin/python'
+    let g:python3_host_prog = '/usr/bin/python3'
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+    let g:deoplete#ignore_sources.php = ['omni']
 endif
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -195,15 +182,10 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-	let g:neocomplete#sources#omni#input_patterns = {}
+    let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " Plugin key-mappings.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -218,31 +200,34 @@ nmap <silent> - <Plug>nextvalDec
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB>
-	\ pumvisible() ? "\<C-n>" :
-	\ neosnippet#expandable_or_jumpable() ?
-	\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    \ pumvisible() ? "\<C-n>" :
+    \ neosnippet#expandable_or_jumpable() ?
+    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-	\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
-	set conceallevel=2 concealcursor=niv
+    set conceallevel=2 concealcursor=niv
 endif
 
 "Prevent vim from moving cursor to the left when leaving Insert mode
 " au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
-let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
-let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
-let php_noShortTags = 1    "Disable PHP short tags.
+let php_htmlInStrings = 1 "Syntax highlight HTML code inside PHP strings.
+let php_sql_query     = 1 "Syntax highlight SQL code inside PHP strings.
+let php_noShortTags   = 1 "Disable PHP short tags.
 let g:DisableAutoPHPFolding = 1
-let g:tagbar_left=0
-let g:tagbar_width=30
-let g:tagbar_sort=0
-let g:tagbar_compact=1
-let g:tagbar_indent=1
-let g:tagbar_show_linenumbers=0
-let g:tagbar_autopreview = 0
+
+" Tagbar
+let g:tagbar_left    = 0
+let g:tagbar_width   = 30
+let g:tagbar_sort    = 0
+let g:tagbar_compact = 1
+let g:tagbar_indent  = 1
+let g:tagbar_show_linenumbers = 0
+let g:tagbar_autopreview      = 0
+
 " Custom Snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#expand_word_boundary=1
@@ -271,29 +256,28 @@ let g:tmuxline_powerline_separators = 1
 
 " Toggle between predefined dark and light mode
 function! Dark()
-	set background=dark
-	let g:airline_theme=g:dark_airline_theme
+    set background=dark
+    let g:airline_theme=g:dark_airline_theme
 endfunction
 function! Light()
-	set background=light
-	let g:airline_theme=g:light_airline_theme
+    set background=light
+    let g:airline_theme=g:light_airline_theme
 endfunction
 function! ToggleScheme()
-	if &background=='dark'
-		call Light()
-	else
-		call Dark()
-	endif
-	" Somehow this is needed twice (only once gives glitches)
-	AirlineRefresh
-	AirlineRefresh
+    if &background=='dark'
+        call Light()
+    else
+        call Dark()
+    endif
+    " Somehow this is needed twice (only once gives glitches)
+    AirlineRefresh
+    AirlineRefresh
 endfunction
 
-
 " Custom GUI settings
-highlight Cursor gui=reverse term=reverse
-highlight Cursor guifg=yellow guibg=black
-highlight iCursor guifg=white guibg=blue
+highlight   Cursor    gui=reverse    term=reverse
+highlight   Cursor    guifg=yellow   guibg=black
+highlight   iCursor   guifg=white    guibg=blue
 set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 " set guicursor+=n-v-c:blinkon0
@@ -324,7 +308,7 @@ nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
 cmap w!! w !sudo tee % >/dev/null
 " Press ,v to edit .vimrc
-nmap <leader>v	:e ~/.vimrc<CR>
+nmap <leader>v  :e ~/.vimrc<CR>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -332,10 +316,10 @@ nnoremap <right> <nop>
 
 " Override this config if needed
 try
-	source ~/vimconfig/override_vimrc
+    source ~/vimconfig/override_vimrc
 catch
-	" No override_vimrc file found,
-	" Let's ignore it
+    " No override_vimrc file found,
+    " Let's ignore it
 endtry
 
 " Debug if needed
