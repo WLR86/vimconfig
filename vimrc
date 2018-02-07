@@ -106,7 +106,9 @@ set noautochdir
 set ttimeoutlen=50
 set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
-autocmd FileType * nested :TagbarOpen
+if !&diff
+    autocmd FileType * nested :TagbarOpen
+endif
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 " Close NERDTree if it's the last buffer opened
