@@ -283,8 +283,8 @@ set guicursor+=i:ver100-iCursor
 " set guicursor+=n-v-c:blinkon0
 " set guicursor+=i:blinkwait10
 
-" Set font for MacVim
-set guifont=InputMono\ ExLight:h18
+" Set font for MacVim: this must be defined in .gvimrc
+" set guifont=Knack\ Nerd\ Font:h18
 
 " Easy-escape
 let g:easyescape_chars = { "j": 2 }
