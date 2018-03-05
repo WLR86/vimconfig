@@ -66,7 +66,7 @@ let g:airline_inactive_collapse=0
 
 " Comment if not using NerdFont
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch = ''
 
@@ -105,7 +105,7 @@ set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 if !&diff
 	if &ft !~ 'sh\|bash'
-        autocmd FileType * nested :TagbarOpen
+		autocmd FileType * nested :TagbarOpen
 	endif
 endif
 autocmd BufEnter * :syntax sync fromstart
@@ -121,14 +121,14 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
+			\ 'default' : '',
+			\ 'vimshell' : $HOME.'/.vimshell_hist',
+			\ 'scheme' : $HOME.'/.gosh_completions'
+			\ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
+	let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -140,9 +140,9 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-    "return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-    " For no inserting <CR> key.
-    return pumvisible() ? "\<C-y>" : "\<CR>"
+	"return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+	" For no inserting <CR> key.
+	return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -168,11 +168,11 @@ let g:php_cs_fixer_verbose = 0                 " Return the output of command if
 
 " deoplete
 if has('nvim')
-    let g:python_host_prog = '/usr/bin/python'
-    let g:python3_host_prog = '/usr/bin/python3'
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-    let g:deoplete#ignore_sources.php = ['omni']
+	let g:python_host_prog = '/usr/bin/python'
+	let g:python3_host_prog = '/usr/bin/python3'
+	let g:deoplete#enable_at_startup = 1
+	let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+	let g:deoplete#ignore_sources.php = ['omni']
 endif
 
 " Enable omni completion.
@@ -184,7 +184,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
+	let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
@@ -202,15 +202,15 @@ nmap <silent> - <Plug>nextvalDec
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ neosnippet#expandable_or_jumpable() ?
-    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+			\ pumvisible() ? "\<C-n>" :
+			\ neosnippet#expandable_or_jumpable() ?
+			\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
-    set conceallevel=2 concealcursor=niv
+	set conceallevel=2 concealcursor=niv
 endif
 
 "Prevent vim from moving cursor to the left when leaving Insert mode
@@ -258,22 +258,22 @@ let g:tmuxline_powerline_separators = 1
 
 " Toggle between predefined dark and light mode
 function! Dark()
-    set background=dark
-    let g:airline_theme=g:dark_airline_theme
+	set background=dark
+	let g:airline_theme=g:dark_airline_theme
 endfunction
 function! Light()
-    set background=light
-    let g:airline_theme=g:light_airline_theme
+	set background=light
+	let g:airline_theme=g:light_airline_theme
 endfunction
 function! ToggleScheme()
-    if &background=='dark'
-        call Light()
-    else
-        call Dark()
-    endif
-    " Somehow this is needed twice (only once gives glitches)
-    AirlineRefresh
-    AirlineRefresh
+	if &background=='dark'
+		call Light()
+	else
+		call Dark()
+	endif
+	" Somehow this is needed twice (only once gives glitches)
+	AirlineRefresh
+	AirlineRefresh
 endfunction
 
 " Custom GUI settings
@@ -318,10 +318,10 @@ nnoremap <right> <nop>
 
 " Override this config if needed
 try
-    source ~/vimconfig/override_vimrc
+	source ~/vimconfig/override_vimrc
 catch
-    " No override_vimrc file found,
-    " Let's ignore it
+	" No override_vimrc file found,
+	" Let's ignore it
 endtry
 
 " Debug if needed
