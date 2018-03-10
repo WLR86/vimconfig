@@ -1,8 +1,8 @@
 # vimconfig
-My personal ViM config
+My personal Vim config
 
-I'm a Vim lover, although I used and tested a whole bunch of text editors and IDEs, ViM is still my favorite tool.
-This repo allows me to deploy my ViM env to all my servers/machines.
+I'm a Vim lover, although I used and tested a whole bunch of text editors and IDEs, Vim is still my favorite tool.
+This repo allows me to deploy my Vim env to all my servers/machines.
 
 I mostly do LAMP dev and sysadmin tasks on Debian 7/8/9 servers, so if you think
 it might suit your needs too, feel free to clone it :).
@@ -25,23 +25,23 @@ sudo pip3 install neovim
 ```
 
 ## How to install :
-1) Clone this repo from your home directory
+1) Clone this repo to your home directory
 2) cd to vimconfig
 3) run install.sh
 4) Done =)
 
 ## Custom keys
-- F2: Toggle paste mode
-- F3: Set dark mode
-- F4: Set light mode
-- F5: Previous Buffer
-- F6: Next Buffer
-- F7: Switch last two Buffers
-- F8: Toggle Tagbar
-- F9: Toggle dark/light mode
-- F12: Redraw Airline
-- jj: Quick Retun to Normal Mode from Insert Mode
-- ,v: Open .vimrc
+- F2  : Toggle paste mode
+- F3  : Set dark mode
+- F4  : Set light mode
+- F5  : Previous Buffer
+- F6  : Next Buffer
+- F7  : Switch last two Buffers
+- F8  : Toggle Tagbar
+- F9  : Toggle dark/light mode
+- F12 : Redraw Airline
+- jj  : Quick Retun to Normal Mode from Insert Mode
+- ,v  : Open .vimrc
 
 ## Custom commands available:
 
