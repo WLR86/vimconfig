@@ -41,26 +41,10 @@ silent! colorscheme PaperColor
 let g:NERDSpaceDelims = 1
 
 " Vim-Airline Cfg
-let g:airline_powerline_fonts = 0
-" let g:airline_right_alt_sep   = ''
-" let g:airline_right_sep       = ''
-" let g:airline_left_alt_sep    = ''
-" let g:airline_left_sep        = ''
-" Rounded
-" let g:airline_left_sep      = "\uE0B4"
-" let g:airline_right_sep     = "\uE0B6"
-" let g:airline_right_alt_sep = "\uE0B7"
-" let g:airline_left_alt_sep  = "\uE0B5"
-" Flames
-" let g:airline_left_sep      = "\uE0C0"
-" let g:airline_right_sep     = "\uE0C2"
-" let g:airline_right_alt_sep = "\uE0C3"
-" let g:airline_left_alt_sep  = "\uE0C1"
+let g:airline_powerline_fonts = 1
 
 let g:airline#extensions#tabline#enabled         = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#left_sep        = ''
-let g:airline#extensions#tabline#left_alt_sep    = ''
 let g:airline#extensions#tagbar#enabled          = 1
 let g:airline_inactive_collapse                  = 0
 let g:airline_skip_empty_sections                = 1
@@ -70,7 +54,33 @@ let g:airline_highlighting_cache                 = 1
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-let g:airline_symbols.branch = ''
+
+if ( g:airline_powerline_fonts == 0 )
+	let g:airline_symbols.branch = ''
+	let g:airline#extensions#tabline#left_sep        = ''
+	let g:airline#extensions#tabline#left_alt_sep    = ''
+	let g:airline_right_alt_sep   = ''
+	let g:airline_right_sep       = ''
+	let g:airline_left_alt_sep    = ''
+	let g:airline_left_sep        = ''
+	" Rounded
+	" let g:airline_left_sep      = "\uE0B4"
+	" let g:airline_right_sep     = "\uE0B6"
+	" let g:airline_right_alt_sep = "\uE0B7"
+	" let g:airline_left_alt_sep  = "\uE0B5"
+	" Flames
+	" let g:airline_left_sep      = "\uE0C0"
+	" let g:airline_right_sep     = "\uE0C2"
+	" let g:airline_right_alt_sep = "\uE0C3"
+	" let g:airline_left_alt_sep  = "\uE0C1"
+
+else
+	let g:airline_symbols.branch = 'ᚠ'
+	let g:airline_right_alt_sep   = ''
+	let g:airline_right_sep       = ''
+	let g:airline_left_alt_sep    = ''
+	let g:airline_left_sep        = ''
+endif
 
 " certain number of spaces are allowed after tabs, but not in between
 " this algorithm works well for /** */ style comments in a tab-indented file
