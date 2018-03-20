@@ -41,11 +41,11 @@ silent! colorscheme PaperColor
 let g:NERDSpaceDelims = 1
 
 " Vim-Airline Cfg
-let g:airline_powerline_fonts = 1
-let g:airline_right_alt_sep   = ''
-let g:airline_right_sep       = ''
-let g:airline_left_alt_sep    = ''
-let g:airline_left_sep        = ''
+let g:airline_powerline_fonts = 0
+" let g:airline_right_alt_sep   = ''
+" let g:airline_right_sep       = ''
+" let g:airline_left_alt_sep    = ''
+" let g:airline_left_sep        = ''
 " Rounded
 " let g:airline_left_sep      = "\uE0B4"
 " let g:airline_right_sep     = "\uE0B6"
@@ -254,7 +254,7 @@ autocmd BufWinLeave * call clearmatches()
 
 " tmuxline
 let g:airline#extensions#tmuxline#enabled=1
-let g:tmuxline_powerline_separators = 1
+let g:tmuxline_powerline_separators = 0
 
 " Toggle between predefined dark and light mode
 function! Dark()
