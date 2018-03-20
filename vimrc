@@ -59,6 +59,7 @@ if ( g:airline_powerline_fonts == 0 )
 	let g:airline_symbols.branch = ''
 	let g:airline#extensions#tabline#left_sep        = ''
 	let g:airline#extensions#tabline#left_alt_sep    = ''
+	let g:tmuxline_powerline_separators = 1
 	let g:airline_right_alt_sep   = ''
 	let g:airline_right_sep       = ''
 	let g:airline_left_alt_sep    = ''
@@ -80,6 +81,7 @@ else
 	let g:airline_right_sep       = ''
 	let g:airline_left_alt_sep    = ''
 	let g:airline_left_sep        = ''
+	let g:tmuxline_powerline_separators = 0
 endif
 
 " certain number of spaces are allowed after tabs, but not in between
@@ -264,7 +266,6 @@ autocmd BufWinLeave * call clearmatches()
 
 " tmuxline
 let g:airline#extensions#tmuxline#enabled=1
-let g:tmuxline_powerline_separators = 0
 
 " Toggle between predefined dark and light mode
 function! Dark()
