@@ -202,6 +202,7 @@ let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
 " Plugin key-mappings.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+inoremap <C-u> <C-k>
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
@@ -211,8 +212,6 @@ nmap <silent> + <Plug>nextvalInc
 nmap <silent> - <Plug>nextvalDec
 
 " SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB>
 			\ pumvisible() ? "\<C-n>" :
 			\ neosnippet#expandable_or_jumpable() ?
