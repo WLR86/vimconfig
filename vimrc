@@ -318,6 +318,7 @@ nmap <silent> <F8> :TagbarToggle<CR>
 nmap <silent> <F9> :call ToggleScheme()<CR>
 nmap <silent> <F12> :AirlineRefresh<CR>
 imap £ ->
+vnoremap <silent><leader>$ "xy:call system('say '. shellescape(@x) .' &')<CR>
 cmap w!! w !sudo tee % >/dev/null
 " Press ,v to edit .vimrc
 nmap <leader>v  :e ~/.vimrc<CR>
