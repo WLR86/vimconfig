@@ -42,6 +42,7 @@ sudo pip3 install neovim
 - F12 : Redraw Airline
 - jj  : Quick Retun to Normal Mode from Insert Mode
 - ,v  : Open .vimrc
+- ,n  : Toggle between number,relativenumber,nonumber
 
 ## Custom commands available:
 

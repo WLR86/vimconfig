@@ -164,6 +164,18 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
 
+" Switch between number / relativenumber
+function! BetterLineNumber() abort
+	if &number && &relativenumber
+		set nonumber norelativenumber
+	elseif &number
+		set relativenumber
+	else
+		set number
+	endif
+endfunction
+nnoremap <leader>n :call BetterLineNumber()<cr>
+
 " AutoComplPop like behavior.
 let g:neocomplete#enable_auto_select = 1
 
