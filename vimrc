@@ -29,10 +29,15 @@ let mapleader=","
 
 source ~/.vim/plugins.vim
 filetype plugin indent on
-
+set mouse+=a
+if &term =~ '^screen'
+	" tmux knows the extended mouse mode
+	set ttymouse=xterm2
+endif
 syntax on
 set number
 set mouse=a
+
 " clearing uses the current background color
 set t_ut=
 silent! colorscheme PaperColor
