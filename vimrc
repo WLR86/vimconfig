@@ -118,7 +118,9 @@ set noet
 set ts=4
 set showcmd
 set shiftwidth=4
-set noautochdir
+if exists('+autochdir')
+	set noautochdir
+endif
 set ttimeoutlen=50
 set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
