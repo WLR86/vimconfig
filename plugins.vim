@@ -13,7 +13,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 if has('nvim')
 	Plugin 'Shougo/deoplete.nvim'
 	Plugin 'lvht/phpcd.vim'
-else
+elseif has('lua')
 	Plugin 'Shougo/neocomplete.vim'
 endif
 Plugin 'Shougo/neosnippet.vim'
