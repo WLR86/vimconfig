@@ -327,7 +327,6 @@ inoremap jj <Esc>`^
 nmap <RightMouse> za
 map <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
-nmap <silent> <F2> :set paste<CR>:
 nmap <silent> <F3> :call Dark()<CR>
 nmap <silent> <F4> :call Light()<CR>
 nmap <silent> <F5> :bp<CR>
