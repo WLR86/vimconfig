@@ -59,7 +59,7 @@ command! TrimWhiteSpaces %s/\s\+$//g
 ### w!! (mapping)
 Write file when forgot to use sudo
 ```
-cmap w!! w !sudo tee % >/dev/null
+cmap w!! w !sudo tee "%" >/dev/null
 ```
 
 ## Overriding provided config
