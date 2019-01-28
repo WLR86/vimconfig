@@ -129,12 +129,10 @@ if !&diff
 endif
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
-aug CSV_Editing
-	au!
-	au BufRead,BufWritePost *.csv :%ArrangeColumn
-	au BufWritePre *.csv :%UnArrangeColumn
-aug end
 
+" Auto arrange columns when opening csv files (when file size <1MB)
+let g:csv_autocmd_arrange = 1
+let g:csv_autocmd_arrange_size = 1024*1024
 
 " Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
