@@ -125,7 +125,7 @@ set ttimeoutlen=50
 set fillchars+=vert:\║
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 noexpandtab
 if !&diff
-	autocmd FileType php,c,js,python nested :TagbarOpen
+	autocmd FileType php,c,js,python :TagbarOpen
 endif
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufRead,BufNewFile *.sieve set filetype=sieve
