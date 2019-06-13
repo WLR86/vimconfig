@@ -43,6 +43,7 @@ sudo pip3 install neovim
 - jj  : Quick Retun to Normal Mode from Insert Mode
 - ,v  : Open .vimrc
 - ,n  : Toggle between number,relativenumber,nonumber
+- crX : Edit macro X
 
 ## Custom commands available:
 

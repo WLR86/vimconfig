@@ -313,6 +313,15 @@ function! ToggleScheme()
 	AirlineRefresh
 endfunction
 
+" Change register
+function! ChangeReg() abort
+    let r = nr2char(getchar())
+    if r =~# '[a-zA-Z0-9"@\-:.%#=*"~_/]'
+        call feedkeys("q:ilet @" . r . " = \<C-r>\<C-r>=string(@" . r . ")\<CR>\<ESC>", 'n')
+    endif
+endfunction
+nnoremap <silent> cr :call ChangeReg()<CR>
+
 " Custom GUI settings
 highlight   Cursor    gui=reverse    term=reverse
 highlight   Cursor    guifg=yellow   guibg=black
