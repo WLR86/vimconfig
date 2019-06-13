@@ -42,6 +42,10 @@ set mouse=a
 set t_ut=
 silent! colorscheme PaperColor
 
+" disable AutoPairs conflicting mappings
+let g:AutoPairsShortcutBackInsert=''
+let g:AutoPairsShortcutJump=''
+
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
