@@ -137,6 +137,9 @@ autocmd BufRead,BufNewFile *.sieve set filetype=sieve
 " Auto arrange columns when opening csv files (when file size <1MB)
 let g:csv_autocmd_arrange = 1
 let g:csv_autocmd_arrange_size = 1024*1024
+" Limit CSV file analysis to the first 100 lines so it loads faster
+let g:csv_start=1
+let g:csv_end=100
 
 " Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
