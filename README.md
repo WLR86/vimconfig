@@ -40,9 +40,9 @@ sudo pip3 install neovim
 - F8  : Toggle Tagbar
 - F9  : Toggle dark/light mode
 - F12 : Redraw Airline
-- jj  : Quick Retun to Normal Mode from Insert Mode
+- jj  : Quick Return to Normal Mode from Insert Mode
 - ,v  : Open .vimrc
-- ,n  : Toggle between number,relativenumber,nonumber
+- ,n  : Cycle between number,relativenumber,nonumber
 - crX : Edit macro X
 
 ## Custom commands available:
