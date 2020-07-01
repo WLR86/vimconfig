@@ -360,10 +360,17 @@ vnoremap <silent><leader>$ "xy:call system('say '. shellescape(@x) .' &')<CR>
 cmap w!! w !sudo tee "%" >/dev/null
 " Press ,v to edit .vimrc
 nmap <leader>v  :e ~/.vimrc<CR>
+" press ,q to close current buffer
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
+" Emmet
+augroup EmmetSettings
+	autocmd! FileType html imap <C-tab> <plug>(emmet-expand-abbr)
+augroup END
 
 " Override this config if needed
 try

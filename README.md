@@ -40,10 +40,6 @@ sudo pip3 install neovim
 - F8  : Toggle Tagbar
 - F9  : Toggle dark/light mode
 - F12 : Redraw Airline
-- jj  : Quick Return to Normal Mode from Insert Mode
-- ,v  : Open .vimrc
-- ,n  : Cycle between number,relativenumber,nonumber
-- crX : Edit macro X
 
 ## Custom commands available:
 
@@ -62,6 +58,13 @@ Write file when forgot to use sudo
 ```
 cmap w!! w !sudo tee "%" >/dev/null
 ```
+## Custom shortcuts
+- Ctrl-Tab : Emmet shortcut for HTML file (loaded via filetype autocmd)
+- ,q       : Close current buffer
+- jj       : Quick Return to Normal Mode from Insert Mode
+- ,v       : Open .vimrc
+- ,n       : Cycle between number,relativenumber,nonumber
+- crX      : Edit macro X
 
 ## Overriding provided config
 If something in the config isn't working properly on a given machine, you can override settings by using a file named 'override_vimrc'.
