@@ -272,6 +272,8 @@ let g:tagbar_show_linenumbers = 0
 let g:tagbar_autopreview      = 0
 
 " Custom Snippets
+" Disable preview in neosnippet
+set completeopt-=menuone
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#expand_word_boundary=1
 " Enable snipMate compatibility feature.
@@ -291,7 +293,9 @@ match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+" Plugin Colorizer is currently disabled due to a bug
+" autocmd BufWinLeave * call clearmatches()
+" autocmd BufWinLeave * if &modifiable && &ft!='unite' | call clearmatches() | endif
 
 " tmuxline
 let g:airline#extensions#tmuxline#enabled=1
