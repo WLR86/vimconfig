@@ -44,4 +44,5 @@ Plugin 'vim-airline/vim-airline-themes'
 if (g:nerdfont_enabled)
 	Plugin 'ryanoasis/vim-devicons'
 endif
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
