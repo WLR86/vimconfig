@@ -219,7 +219,7 @@ endif
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags 
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -274,6 +274,7 @@ let g:tagbar_autopreview      = 0
 " Custom Snippets
 " Disable preview in neosnippet
 set completeopt-=menuone
+set completeopt-=preview
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#expand_word_boundary=1
 " Enable snipMate compatibility feature.
