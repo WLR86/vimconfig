@@ -4,7 +4,7 @@ My personal Vim config
 I'm a Vim lover, although I used and tested a whole bunch of text editors and IDEs, Vim is still my favorite tool.
 This repo allows me to deploy my Vim env to all my servers/machines.
 
-I mostly do LAMP dev and sysadmin tasks on Debian 7/8/9 servers, so if you think
+I mostly do LAMP dev and sysadmin tasks on Debian 10/11 servers, so if you think
 it might suit your needs too, feel free to clone it :).
 
 This vimrc works also fine on my Mac, using MacVim and vim/NeoVim on this platform.
