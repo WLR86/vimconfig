@@ -219,7 +219,7 @@ endif
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags 
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -306,10 +306,14 @@ let g:airline#extensions#tmuxline#enabled=1
 function! Dark()
 	set background=dark
 	let g:airline_theme=g:dark_airline_theme
+	AirlineRefresh
+	AirlineRefresh
 endfunction
 function! Light()
 	set background=light
 	let g:airline_theme=g:light_airline_theme
+	AirlineRefresh
+	AirlineRefresh
 endfunction
 function! ToggleScheme()
 	if &background=='dark'

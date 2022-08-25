@@ -41,6 +41,14 @@ sudo pip3 install neovim
 - F9  : Toggle dark/light mode
 - F12 : Redraw Airline
 
+### PHPctags
+You may need tagbar-phpctags if you're into PHP coding. If so, install the required bits
+```bash
+curl -Ss https://raw.githubusercontent.com/vim-php/phpctags/gh-pages/install/phpctags.phar > phpctags
+chmod +x phpctags
+sudo mv phpctags /usr/local/bin
+```
+
 ## Custom commands available:
 
 ### MakeTags
