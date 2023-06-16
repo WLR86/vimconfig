@@ -102,9 +102,10 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:syntastic_error_symbol               = "✗"
 let g:syntastic_warning_symbol             = "!"
 let g:syntastic_always_populate_loc_list   = 1
-let g:syntastic_auto_loc_list              = 1
+let g:syntastic_auto_loc_list              = 0
 let g:syntastic_check_on_open              = 1
 let g:syntastic_check_on_wq                = 1
+let g:syntastic_python_checkers            = ['flake8']
 
 " Make Airline appear
 set laststatus=2
@@ -221,7 +222,7 @@ endif
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python set omnifunc=python3complete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -280,6 +281,13 @@ let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#expand_word_boundary=1
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
+
+
+" Python completion using jedi-vim
+let g:jedi#auto_initialization = 1
+" make j and k work in completion menu
+inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
+inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
 "let g:neosnippet#enable_preview = 1
 " My custom commands
